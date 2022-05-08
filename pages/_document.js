@@ -4,14 +4,13 @@ import createEmotionServer from '@emotion/server/create-instance';
 import createEmotionCache from '../lib/createEmotionCache';
 
 class MyDocument extends Document {
-
   render() {
     return (
       <Html>
         <Head />
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
         />
         <body>
           <Main />
@@ -23,18 +22,18 @@ class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async (ctx) => {
+  const originalRenderPage = ctx.renderPage;
 
-  const originalRenderPage = ctx.renderPage
-
-  const cache = createEmotionCache()
-  const { extractCriticalToChunks } = createEmotionServer(cache)
+  const cache = createEmotionCache();
+  const { extractCriticalToChunks } = createEmotionServer(cache);
 
   ctx.renderPage = () =>
     originalRenderPage({
+      // eslint-disable-next-line react/display-name
       enhanceApp: (App) => (props) => <App emotionCache={cache} {...props} />,
-    })
+    });
 
-  const initialProps = await Document.getInitialProps(ctx)
+  const initialProps = await Document.getInitialProps(ctx);
 
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
@@ -44,12 +43,15 @@ MyDocument.getInitialProps = async (ctx) => {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
     />
-  ))
+  ));
 
   return {
     ...initialProps,
-    styles: [...React.Children.toArray(initialProps.styles), ...emotionStyleTags],
-  }
-}
+    styles: [
+      ...React.Children.toArray(initialProps.styles),
+      ...emotionStyleTags,
+    ],
+  };
+};
 
 export default MyDocument;
