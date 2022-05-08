@@ -36,6 +36,7 @@ const Lgrid = () => {
     </Box>
   );
 };
+Lgrid.displayName = 'Lgrid';
 
 const Rgrid = () => {
   return (
@@ -54,6 +55,7 @@ const Rgrid = () => {
     </Box>
   );
 };
+Rgrid.displayName = 'Rgrid';
 
 const WidgetLayout = () => {
   return (
@@ -69,5 +71,6 @@ const WidgetLayout = () => {
     </Box>
   );
 };
+WidgetLayout.displayName = 'WidgetLayout';
 
 export default WidgetLayout;

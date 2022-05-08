@@ -62,5 +62,6 @@ const Header = () => {
     </Box>
   );
 };
+Header.displayName = 'Header';
 
 export default Header;

@@ -76,6 +76,7 @@ const VidCard = () => {
     </StoryWrapper>
   );
 };
+VidCard.displayName = 'VidCard ';
 
 const Videos = () => {
   return (
@@ -103,5 +104,6 @@ const Videos = () => {
     </Box>
   );
 };
+Videos.displayName = 'Videos';
 
 export default Videos;

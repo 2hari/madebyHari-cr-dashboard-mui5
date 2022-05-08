@@ -35,5 +35,6 @@ const Attendance = () => {
     </Box>
   );
 };
+Attendance.displayName = 'Attendance';
 
 export default Attendance;

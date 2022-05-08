@@ -76,5 +76,6 @@ const Opportunities = () => {
     </Box>
   );
 };
+Opportunities.displayName = 'Opportunities';
 
 export default Opportunities;

@@ -71,6 +71,7 @@ const NavIconItem = ({ icon }) => {
     </Grid>
   );
 };
+NavIconItem.displayName = 'NavIconItem ';
 
 const SideBar = () => {
   return (
@@ -134,5 +135,6 @@ const SideBar = () => {
     </SideNavWrapper>
   );
 };
+SideBar.displayName = 'SideBar';
 
 export default SideBar;

@@ -110,5 +110,6 @@ const Goals = () => {
     </Box>
   );
 };
+Goals.displayName = 'Goals';
 
 export default Goals;

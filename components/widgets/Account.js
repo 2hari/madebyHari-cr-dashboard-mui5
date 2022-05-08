@@ -47,6 +47,7 @@ const ChartData = ({ d }) => {
     </Box>
   );
 };
+ChartData.displayName = 'ChartData';
 
 const Account = () => {
   return (
@@ -90,5 +91,6 @@ const Account = () => {
     </Box>
   );
 };
+Account.displayName = 'Account';
 
 export default Account;

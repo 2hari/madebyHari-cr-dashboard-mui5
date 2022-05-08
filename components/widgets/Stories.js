@@ -62,5 +62,6 @@ const Stories = () => {
     </Box>
   );
 };
+Stories.displayName = 'Stories';
 
 export default Stories;

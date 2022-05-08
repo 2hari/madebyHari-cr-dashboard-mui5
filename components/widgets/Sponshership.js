@@ -41,6 +41,7 @@ const Sponsordata = [
     much: '$24',
   },
 ];
+Rgrid.displayName = 'Rgrid';
 
 const Sponsor = ({ d }) => {
   return (
@@ -97,6 +98,7 @@ const Sponsor = ({ d }) => {
     </Grid>
   );
 };
+Sponsor.displayName = 'Sponsor';
 
 const Sponshership = () => {
   return (
@@ -131,5 +133,6 @@ const Sponshership = () => {
     </Box>
   );
 };
+Sponshership.displayName = 'Sponshership';
 
 export default Sponshership;

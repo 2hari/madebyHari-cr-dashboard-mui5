@@ -130,5 +130,6 @@ const Assessments = () => {
     </Box>
   );
 };
+Assessments.displayName = 'Assessments';
 
 export default Assessments;
