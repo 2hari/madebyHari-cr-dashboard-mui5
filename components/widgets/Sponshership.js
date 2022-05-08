@@ -41,7 +41,6 @@ const Sponsordata = [
     much: '$24',
   },
 ];
-Rgrid.displayName = 'Rgrid';
 
 const Sponsor = ({ d }) => {
   return (
